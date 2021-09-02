@@ -617,6 +617,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8654387210625765748, guid: fe14a211cfaf60b4dac44b5cecb9747c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654387210625765748, guid: fe14a211cfaf60b4dac44b5cecb9747c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1936620111
+      objectReference: {fileID: 0}
     - target: {fileID: 8654387210720506861, guid: fe14a211cfaf60b4dac44b5cecb9747c, type: 3}
       propertyPath: m_Name
       value: PathPoint
@@ -664,6 +672,22 @@ PrefabInstance:
     - target: {fileID: 8654387210720506863, guid: fe14a211cfaf60b4dac44b5cecb9747c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654387210803446254, guid: fe14a211cfaf60b4dac44b5cecb9747c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654387210803446254, guid: fe14a211cfaf60b4dac44b5cecb9747c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1936620111
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654387211935308191, guid: fe14a211cfaf60b4dac44b5cecb9747c, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8654387211935308191, guid: fe14a211cfaf60b4dac44b5cecb9747c, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1936620111
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe14a211cfaf60b4dac44b5cecb9747c, type: 3}
