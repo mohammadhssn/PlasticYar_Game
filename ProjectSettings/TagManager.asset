@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Bird
+  - Cup
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Ground
+    uniqueID: 258940773
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Bird
+    uniqueID: 3327274177
+    locked: 0
+  - name: SlingShot
+    uniqueID: 4093978103
+    locked: 0
+  - name: Cup
+    uniqueID: 2358347185
+    locked: 0
