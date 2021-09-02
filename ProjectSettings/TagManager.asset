@@ -47,6 +47,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Wall
+    uniqueID: 1722941641
+    locked: 0
   - name: Bird
     uniqueID: 3327274177
     locked: 0
