@@ -36,7 +36,7 @@ public class Bird : MonoBehaviour
 
     IEnumerator ResetAfterDelay()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3f);
         //this.gameObject.SetActive(false);
         Destroy(this.gameObject);
         //_rigidbody2D.isKinematic = true;
