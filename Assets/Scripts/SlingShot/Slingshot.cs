@@ -94,6 +94,7 @@ public class Slingshot : MonoBehaviour
     private void OnMouseDown()
     {
         isMouseDown = true;
+        AudioMaster.Play(0);
     }
 
     private void OnMouseUp()

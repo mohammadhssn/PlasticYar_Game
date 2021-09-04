@@ -6,6 +6,10 @@ using UnityEngine;
 public class cup : MonoBehaviour
 {
     private Game game;
+    [SerializeField]private Slingshot slingshot;
+    [SerializeField] private List<GameObject> complateBird;
+    [SerializeField] private int numberbirds;
+    private GameObject activeBird;
     private void Awake()
     {
         game = FindObjectOfType<Game>();
@@ -22,4 +26,19 @@ public class cup : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        activeBird = GameObject.FindGameObjectWithTag("Bird");
+        if (slingshot.birdPrefab.Count == 0 && !activeBird)
+        {
+            if (complateBird.Count == numberbirds)
+            {
+                Debug.Log("Complate Level");
+            }
+            else
+            {
+                Debug.Log("Try Again!");
+            }
+        }
+    }
 }
