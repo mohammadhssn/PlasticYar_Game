@@ -568,6 +568,52 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1092197025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1092197027}
+  - component: {fileID: 1092197026}
+  m_Layer: 0
+  m_Name: AudioMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1092197026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092197025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d3b3a957581c644b4577333c63d2e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioSorces_: 1
+  clips:
+  - {fileID: 8300000, guid: 536ad16d87de258499d2a3ab3c1b34c0, type: 3}
+--- !u!4 &1092197027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092197025}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1786992355
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +741,17 @@ RectTransform:
   m_AnchoredPosition: {x: -152.54797, y: -53.22888}
   m_SizeDelta: {x: 305.096, y: 106.4578}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2069057362 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3699749496702759330, guid: eb598bea08c18db4bb777b181dfa14e5, type: 3}
+  m_PrefabInstance: {fileID: 3699749496117141776}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b93a02089831ac04f946dd57f0a33d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3699749496117141776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -767,6 +824,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6514224417954832140, guid: 9fcd73ab22c04174cba3a080c39f6818, type: 3}
+      propertyPath: slingshot
+      value: 
+      objectReference: {fileID: 2069057362}
+    - target: {fileID: 6514224417954832140, guid: 9fcd73ab22c04174cba3a080c39f6818, type: 3}
+      propertyPath: numberbirds
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6514224417954832142, guid: 9fcd73ab22c04174cba3a080c39f6818, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
