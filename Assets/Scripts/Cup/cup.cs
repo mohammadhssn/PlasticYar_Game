@@ -22,6 +22,7 @@ public class cup : MonoBehaviour
         {
             Bird bird = other.gameObject.GetComponent<Bird>();
             game.AddToScore(bird.ScoreCoin);
+            complateBird.Add(bird.gameObject);
             bird.gameObject.SetActive(false);
         }
     }
