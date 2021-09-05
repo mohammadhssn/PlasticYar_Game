@@ -17,7 +17,7 @@ public class Slingshot : MonoBehaviour
 
     bool isMouseDown;
 
-    public List<GameObject> birdPrefab;
+    public List<GameObject> birdPrefab; // list gameobject bird also use change
 
     public float birdPositionOffset;
 
@@ -94,7 +94,7 @@ public class Slingshot : MonoBehaviour
     private void OnMouseDown()
     {
         isMouseDown = true;
-        AudioMaster.Play(0);
+        AudioMaster.Play(0); // play audio
     }
 
     private void OnMouseUp()

@@ -1,13 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
 
-    public int ScoreCoin = 10;
+    public int ScoreCoin = 10; // score
     public bool collided;
 
+    
     public void Release()
     {
         PathPoints.instance.Clear();
@@ -27,7 +29,7 @@ public class Bird : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         collided = true;
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground"))  // check for Destroy object(bird) 
         {
             StartCoroutine(ResetAfterDelay());
         }
@@ -39,8 +41,6 @@ public class Bird : MonoBehaviour
         yield return new WaitForSeconds(3f);
         //this.gameObject.SetActive(false);
         Destroy(this.gameObject);
-        //_rigidbody2D.isKinematic = true;
-        //_rigidbody2D.velocity = Vector2.zero;
         
     }
 }

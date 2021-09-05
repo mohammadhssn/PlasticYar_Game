@@ -5,14 +5,11 @@ using UnityEngine;
 
 public class cup : MonoBehaviour
 {
-    private Game game;
-    [SerializeField]private Slingshot slingshot;
-    [SerializeField] private List<GameObject> complateBird;
-    [SerializeField] private int numberbirds;
-    private GameObject activeBird;
+    private GameManger gameManger;
+    
     private void Awake()
     {
-        game = FindObjectOfType<Game>();
+        gameManger = FindObjectOfType<GameManger>();
     }
 
     private void OnCollisionStay2D(Collision2D other)
@@ -21,25 +18,9 @@ public class cup : MonoBehaviour
         if (other.gameObject.CompareTag("Bird"))
         {
             Bird bird = other.gameObject.GetComponent<Bird>();
-            game.AddToScore(bird.ScoreCoin);
-            complateBird.Add(bird.gameObject);
+            gameManger.AddToScore(bird.ScoreCoin);
+            gameManger.complateBird.Add(bird.gameObject);
             bird.gameObject.SetActive(false);
-        }
-    }
-
-    private void Update()
-    {
-        activeBird = GameObject.FindGameObjectWithTag("Bird");
-        if (slingshot.birdPrefab.Count == 0 && !activeBird)
-        {
-            if (complateBird.Count == numberbirds)
-            {
-                Debug.Log("Complate Level");
-            }
-            else
-            {
-                Debug.Log("Try Again!");
-            }
         }
     }
 }
