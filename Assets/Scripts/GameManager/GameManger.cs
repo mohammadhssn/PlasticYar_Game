@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameManger : MonoBehaviour
 {
+    [SerializeField] private int LevelToUnlock;
+    
     // use for image birds
     private GameObject _blueBird;
     private GameObject _yellowBird;
@@ -65,6 +67,7 @@ public class GameManger : MonoBehaviour
             if (complateBird.Count == numberbirds)
             {
                 Debug.Log("Complate Level");
+                PlayerPrefs.SetInt("levelReached",LevelToUnlock);
             }
             else
             {
