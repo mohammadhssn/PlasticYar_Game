@@ -380,22 +380,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 67373730380577145, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67373730380577145, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67373730380577145, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 67373730380577145, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
-      propertyPath: m_RaycastTarget
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1405911505269055388, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
       propertyPath: m_Camera
       value: 
@@ -531,10 +515,6 @@ PrefabInstance:
     - target: {fileID: 6487244822769802412, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8278469606896948433, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8877622523478999676, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
       propertyPath: m_AnchorMax.y
