@@ -1,19 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
     [SerializeField] private GameObject  settingPanel;
-    void Start()
+    [SerializeField] private Text mainScoreText;
+    private int _mainScore;
+    void Awake()
     {
-        
+        _mainScore = PlayerPrefs.GetInt("_mainScore", 0);
+        mainScoreText.text = _mainScore.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            PlayerPrefs.DeleteAll();
+        }
     }
 
     public void SelectButtonSetting()

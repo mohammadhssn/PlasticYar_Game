@@ -3,9 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+//using Cinemachine;
 
 public class GameManger : MonoBehaviour
 {
+    //private CinemachineVirtualCamera myCinemachineVirtualCamera; //cinemachinw
+    int scoreMain;
+    
+    
     [SerializeField] private int LevelToUnlock;
     
     // use for image birds
@@ -26,14 +31,27 @@ public class GameManger : MonoBehaviour
     
     void Start()
     {
+        scoreMain = PlayerPrefs.GetInt("_mainScore");
         scoreText.text = playerScore.ToString();
+        //myCinemachineVirtualCamera = GameObject.FindGameObjectWithTag("Vm Camera").GetComponent<CinemachineVirtualCamera>();
     }
 
     private void Update()
     {
         NextImageBirds();
         WinLevel();
+       //AddBirdToCinemachine();
     }
+
+    /*
+    void AddBirdToCinemachine()
+    {
+        GameObject birdActive = GameObject.FindGameObjectWithTag("Bird");
+        if (birdActive)
+        {
+            myCinemachineVirtualCamera.m_Follow = birdActive.transform;
+        }
+    }*/
 
     public void AddToScore(int score)
     {
@@ -68,6 +86,9 @@ public class GameManger : MonoBehaviour
             {
                 Debug.Log("Complate Level");
                 PlayerPrefs.SetInt("levelReached",LevelToUnlock);
+                if (PlayerPrefs.HasKey("_mainScore"))
+                    PlayerPrefs.SetInt("_mainScore", scoreMain + playerScore);
+                PlayerPrefs.Save();
             }
             else
             {

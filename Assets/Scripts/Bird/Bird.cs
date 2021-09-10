@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class Bird : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Bird : MonoBehaviour
     public int ScoreCoin = 10; // score
     public bool collided;
 
-    
+
     public void Release()
     {
         PathPoints.instance.Clear();
@@ -40,7 +41,8 @@ public class Bird : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);
         //this.gameObject.SetActive(false);
-        Destroy(this.gameObject);
+        if (this.gameObject)
+            Destroy(this.gameObject);
         
     }
 }
