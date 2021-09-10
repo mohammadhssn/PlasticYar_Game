@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8354099686202339353}
   - component: {fileID: 5269821837961553984}
   - component: {fileID: 8602370683611790914}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bird
   m_TagString: Bird
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 145bac924e67c10459d8a5078c491955, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2342523878701209698}
   - component: {fileID: 1895948798599528507}
   - component: {fileID: 2597498253817402937}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueBird
   m_TagString: Bird
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 145bac924e67c10459d8a5078c491955, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1

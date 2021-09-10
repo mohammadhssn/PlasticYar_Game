@@ -1,9 +1,21 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Slingshot : MonoBehaviour
 {
+    //pathpoint
+    [SerializeField] float spaceBetweenPoint;
+    [SerializeField] private GameObject pointPrefabs;
+    private GameObject[] points;
+    [SerializeField] private int numberOfPoint;
+    //
+    
+    private Vector3 dir;
+
+    private GameObject parentPoint;
+    
     public LineRenderer[] lineRenderers;
     public Transform[] stripPositions;
     public Transform center;
@@ -26,6 +38,11 @@ public class Slingshot : MonoBehaviour
 
     public float force;
 
+    private void Awake()
+    {
+        parentPoint = new GameObject("ParentPoint");
+    }
+
     void Start()
     {
         lineRenderers[0].positionCount = 2;
@@ -34,6 +51,11 @@ public class Slingshot : MonoBehaviour
         lineRenderers[1].SetPosition(0, stripPositions[1].position);
 
         CreateBird();
+        points = new GameObject[numberOfPoint];
+        for (int i = 0; i < numberOfPoint; i++)
+        {
+            points[i] = Instantiate(pointPrefabs, bird.transform.position, Quaternion.identity);
+        }
     }
 
     void CreateBird()
@@ -89,6 +111,11 @@ public class Slingshot : MonoBehaviour
         {
             ResetStrips();
         }
+        for (int i = 0; i < numberOfPoint; i++)
+        {
+            points[i].transform.position = PointPosition(i * spaceBetweenPoint);
+            points[i].transform.SetParent(parentPoint.transform);
+        }
     }
 
     private void OnMouseDown()
@@ -135,7 +162,7 @@ public class Slingshot : MonoBehaviour
 
         if (bird)
         {
-            Vector3 dir = position - center.position;
+            dir = position - center.position;
             bird.transform.position = position + dir.normalized * birdPositionOffset;
             bird.transform.right = -dir.normalized;
         }
@@ -145,5 +172,16 @@ public class Slingshot : MonoBehaviour
     {
         vector.y = Mathf.Clamp(vector.y, bottomBoundary, 1000);
         return vector;
+    }
+    
+    Vector2 PointPosition(float t)
+    {
+        if (bird)
+        {
+            Vector2 currentPointPos = (Vector2)bird.transform.position + (-(Vector2)dir * force * t) + 0.5f * Physics2D.gravity * (t * t);
+            return currentPointPos;
+        }
+
+        return default;
     }
 }
