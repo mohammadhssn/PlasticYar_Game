@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 3699749496702759332}
   m_Layer: 0
   m_Name: SlingShot
-  m_TagString: Untagged
+  m_TagString: SlingShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,6 +164,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b93a02089831ac04f946dd57f0a33d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFlaying: 0
+  spaceBetweenPoint: 0.025
+  pointPrefabs: {fileID: 6745214370307994641, guid: 974ffe2103e069e41aeeb1c9e8d6bd7f, type: 3}
+  numberOfPoint: 65
   lineRenderers:
   - {fileID: 3699749497950821798}
   - {fileID: 3699749497834184213}

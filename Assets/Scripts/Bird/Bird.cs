@@ -10,6 +10,27 @@ public class Bird : MonoBehaviour
     public int ScoreCoin = 10; // score
     public bool collided;
 
+    [SerializeField] private int numOfAudioSelect;
+    [SerializeField] private int numOfAudioFlay;
+    private Slingshot _slingshot;
+    private void Awake()
+    {
+        _slingshot = GameObject.FindGameObjectWithTag("SlingShot").GetComponent<Slingshot>();
+    }
+
+    private void Start()
+    {
+        AudioMaster.Play(numOfAudioSelect);
+    }
+
+    private void Update()
+    {
+        if (_slingshot.isFlaying)
+        {
+            AudioMaster.Play(numOfAudioFlay);
+            _slingshot.isFlaying = false;
+        }
+    }
 
     public void Release()
     {

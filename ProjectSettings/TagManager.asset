@@ -8,6 +8,7 @@ TagManager:
   - Bird
   - Cup
   - Vm Camera
+  - SlingShot
   layers:
   - Default
   - TransparentFX
@@ -59,4 +60,7 @@ TagManager:
     locked: 0
   - name: Cup
     uniqueID: 2358347185
+    locked: 0
+  - name: Coin
+    uniqueID: 111057587
     locked: 0
