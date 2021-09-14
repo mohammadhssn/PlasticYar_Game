@@ -8,6 +8,7 @@ TagManager:
   - Bird
   - Cup
   - Vm Camera
+  - SlingShot
   layers:
   - Default
   - TransparentFX
