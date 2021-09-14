@@ -137,6 +137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreCoin: 10
   collided: 0
+  numOfAudioSelect: 1
+  numOfAudioFlay: 4
 --- !u!114 &8602370683611790914
 MonoBehaviour:
   m_ObjectHideFlags: 0

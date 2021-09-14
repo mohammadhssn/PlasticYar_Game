@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Slingshot : MonoBehaviour
 {
+    public bool isFlaying; //check bird is flay
+    
     //pathpoint
     [SerializeField] float spaceBetweenPoint;
     [SerializeField] private GameObject pointPrefabs;
@@ -45,6 +47,7 @@ public class Slingshot : MonoBehaviour
 
     void Start()
     {
+        isFlaying = false;
         lineRenderers[0].positionCount = 2;
         lineRenderers[1].positionCount = 2;
         lineRenderers[0].SetPosition(0, stripPositions[0].position);
@@ -60,17 +63,17 @@ public class Slingshot : MonoBehaviour
 
     void CreateBird()
     {
-        for (int i = 0; i < birdPrefab.Count; i++)
+        for (int i = 0; i < birdPrefab.Count;)
         {
             bird = Instantiate(birdPrefab[0]).GetComponent<Rigidbody2D>();
-            
+            /*
             if (!birdPrefab[i])
             {
                 bird = Instantiate(birdPrefab[i]).GetComponent<Rigidbody2D>();
 
                 birdPrefab.Remove(birdPrefab[i]);
                 break;
-            }
+            }*/
             birdPrefab.Remove(birdPrefab[0]);
             break;
         }
@@ -126,6 +129,7 @@ public class Slingshot : MonoBehaviour
 
     private void OnMouseUp()
     {
+        isFlaying = true;
         isMouseDown = false;
         Shoot();
         currentPosition = idlePosition.position;

@@ -17,10 +17,7 @@ public class GameManger : MonoBehaviour
     private GameObject _yellowBird;
     [SerializeField] private List<GameObject> imageBirds;
 
-    
-    // Show Score
-    //[SerializeField] private Text scoreText;
-    //[SerializeField] private int playerScore = 10;
+
     
     // Complete Level Or Not
     [SerializeField]private Slingshot slingshot;
@@ -34,7 +31,6 @@ public class GameManger : MonoBehaviour
     void Start()
     {
         scoreMain = PlayerPrefs.GetInt("_mainScore");
-        //scoreText.text = playerScore.ToString();
         _coinsManager = FindObjectOfType<CoinsManager>();
     }
 
@@ -44,12 +40,6 @@ public class GameManger : MonoBehaviour
         WinLevel();
     }
 
-    /*
-    public void AddToScore(int score)
-    {
-        playerScore += score;
-        scoreText.text = playerScore.ToString();
-    }*/
     
     void NextImageBirds()
     {
@@ -77,6 +67,7 @@ public class GameManger : MonoBehaviour
             if (complateBird.Count == numberbirds)
             {
                 Debug.Log("Complate Level");
+                AudioMaster.Play(8);
                 PlayerPrefs.SetInt("levelReached",LevelToUnlock);
                 if (PlayerPrefs.HasKey("_mainScore"))
                     PlayerPrefs.SetInt("_mainScore", scoreMain + _coinsManager.Coins);

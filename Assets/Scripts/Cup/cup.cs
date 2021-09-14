@@ -20,7 +20,7 @@ public class cup : MonoBehaviour
         if (other.gameObject.CompareTag("Bird"))
         {
             Bird bird = other.gameObject.GetComponent<Bird>();
-            //gameManger.AddToScore(bird.ScoreCoin);
+            AudioMaster.Play(7);
             _coinsManager.AddCoins(transform.position, bird.ScoreCoin);
             gameManger.complateBird.Add(bird.gameObject);
             bird.gameObject.SetActive(false);
