@@ -6,10 +6,12 @@ using UnityEngine;
 public class cup : MonoBehaviour
 {
     private GameManger gameManger;
+    private CoinsManager _coinsManager;
     
     private void Awake()
     {
         gameManger = FindObjectOfType<GameManger>();
+        _coinsManager = FindObjectOfType<CoinsManager>();
     }
 
     private void OnCollisionStay2D(Collision2D other)
@@ -18,7 +20,8 @@ public class cup : MonoBehaviour
         if (other.gameObject.CompareTag("Bird"))
         {
             Bird bird = other.gameObject.GetComponent<Bird>();
-            gameManger.AddToScore(bird.ScoreCoin);
+            //gameManger.AddToScore(bird.ScoreCoin);
+            _coinsManager.AddCoins(transform.position, bird.ScoreCoin);
             gameManger.complateBird.Add(bird.gameObject);
             bird.gameObject.SetActive(false);
         }
