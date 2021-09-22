@@ -8,8 +8,8 @@ using UnityEngine.UI;
 public class GameManger : MonoBehaviour
 {
     int scoreMain;
-    
-    
+
+
     [SerializeField] private int LevelToUnlock;
     
     // use for image birds
@@ -69,8 +69,8 @@ public class GameManger : MonoBehaviour
                 Debug.Log("Complate Level");
                 AudioMaster.Play(8);
                 PlayerPrefs.SetInt("levelReached",LevelToUnlock);
-                if (PlayerPrefs.HasKey("_mainScore"))
-                    PlayerPrefs.SetInt("_mainScore", scoreMain + _coinsManager.Coins);
+                PlayerPrefs.SetInt("_mainScore", scoreMain + _coinsManager.Coins);
+                Debug.Log("Save" + _coinsManager.Coins);
                 PlayerPrefs.Save();
             }
             else

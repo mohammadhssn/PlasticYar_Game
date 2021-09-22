@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1392690474717494420, guid: eb952fa0754b6724d91f54f3c5e95940, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462029268909385726, guid: eb952fa0754b6724d91f54f3c5e95940, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1853442881}
+    - target: {fileID: 1462029268909385726, guid: eb952fa0754b6724d91f54f3c5e95940, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462029268909385726, guid: eb952fa0754b6724d91f54f3c5e95940, type: 3}
+      propertyPath: m_PixelPerfect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1930506384455708257, guid: eb952fa0754b6724d91f54f3c5e95940, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -279,6 +295,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &881168615 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2687580255902016753, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
+  m_PrefabInstance: {fileID: 6933601498255497793}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &986076802 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1416278773024066973, guid: d33b43d9dc6c76448b2af0ccb625ba51, type: 3}
@@ -396,6 +423,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2687580255902016753, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 986076802}
     - target: {fileID: 3472669474628274702, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -406,6 +437,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3983494051507387463, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864540009088091625, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864540009088091625, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864540009088091625, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864540009088091625, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864540009088091625, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4864540009088091625, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6268732647778036502, guid: 5eb7956c9eb2475429f13d4e1b658e2b, type: 3}
@@ -555,7 +610,7 @@ PrefabInstance:
       objectReference: {fileID: 337998421}
     - target: {fileID: 1416278773024066973, guid: d33b43d9dc6c76448b2af0ccb625ba51, type: 3}
       propertyPath: levelButtons.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1416278773024066973, guid: d33b43d9dc6c76448b2af0ccb625ba51, type: 3}
       propertyPath: levelButtons.Array.data[0]
@@ -568,7 +623,7 @@ PrefabInstance:
     - target: {fileID: 1416278773024066973, guid: d33b43d9dc6c76448b2af0ccb625ba51, type: 3}
       propertyPath: levelButtons.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 881168615}
     - target: {fileID: 4951590098589149540, guid: d33b43d9dc6c76448b2af0ccb625ba51, type: 3}
       propertyPath: m_RootOrder
       value: 4

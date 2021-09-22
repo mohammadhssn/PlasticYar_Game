@@ -12,6 +12,7 @@ public class MenuManager : MonoBehaviour
     void Awake()
     {
         _mainScore = PlayerPrefs.GetInt("_mainScore", 0);
+        Debug.Log(_mainScore);
         mainScoreText.text = _mainScore.ToString();
     }
 

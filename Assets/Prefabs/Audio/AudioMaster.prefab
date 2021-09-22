@@ -43,6 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d3b3a957581c644b4577333c63d2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioSorces_: 1
+  AudioSorces_: 10
   clips:
   - {fileID: 8300000, guid: 536ad16d87de258499d2a3ab3c1b34c0, type: 3}
+  - {fileID: 8300000, guid: b7689755fd6254742903a18bbf536d9d, type: 3}
+  - {fileID: 8300000, guid: 36e35a13862fded4381a1f2a0d45f389, type: 3}
+  - {fileID: 8300000, guid: a47a892da66a17348b0989b67fea4efb, type: 3}
+  - {fileID: 8300000, guid: bd5cd019bdf747e4b93194da9cd1368d, type: 3}
+  - {fileID: 8300000, guid: 34643c2551e3d2f4d885c8a4293674ad, type: 3}
+  - {fileID: 8300000, guid: f54690679285b194fa273d4d6862d294, type: 3}
+  - {fileID: 8300000, guid: bddb4b69b5bdadc4aa8541f8ef76a2d3, type: 3}
+  - {fileID: 8300000, guid: aed7e49060e8b9542aaa62583dcc02a5, type: 3}
